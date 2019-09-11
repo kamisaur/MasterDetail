@@ -11,18 +11,23 @@ namespace MasterDetail.Core.ViewModels
 
 	public class RootViewModel : MvxNavigationViewModel
 	{
-		public string Title { get; set; } = "Root ViewModel";
 
-		public int Count { get; set; }
+		public string Title => $"No.Window View";
 
-		public RootViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService, IMvxViewModelLoader mvxViewModelLoader) : base(logProvider, navigationService)
+		public RootViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService) : base(logProvider, navigationService)
 		{
-
-	
+			ShowFirstViewCommand = new MvxAsyncCommand(async () => await NavigationService.Navigate<FirstViewModel>());
+			ShowSecondViewCommand = new MvxAsyncCommand(async () => await NavigationService.Navigate<SecondViewModel>());
+			CloseCommand = new MvxAsyncCommand(async () => await NavigationService.Close(this));
 		}
 
-		public IMvxAsyncCommand<int> ShowWindowChildCommand { get; private set; }
 
+
+		public IMvxAsyncCommand ShowFirstViewCommand { get; private set; }
+
+		public IMvxAsyncCommand ShowSecondViewCommand { get; private set; }
+
+		public IMvxAsyncCommand CloseCommand { get; private set; }
 
 	}
 }

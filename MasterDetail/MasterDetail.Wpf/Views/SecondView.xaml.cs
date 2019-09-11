@@ -1,6 +1,4 @@
-﻿using MasterDetail.Core.ViewModels;
-using MvvmCross.Platforms.Wpf.Presenters.Attributes;
-using MvvmCross.ViewModels;
+﻿using MvvmCross.Platforms.Wpf.Presenters.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,12 +17,12 @@ using System.Windows.Shapes;
 namespace MasterDetail.Wpf.Views
 {
 	/// <summary>
-	/// Interaction logic for RootView.xaml
+	/// Interaction logic for SecondView.xaml
 	/// </summary>
-	//[MvxContentPresentation(WindowIdentifier = nameof(WindowView), StackNavigation = false)]
-	public partial class RootView
+	[MvxContentPresentation(WindowIdentifier = nameof(MainWindow), StackNavigation = false)]
+	public partial class SecondView
 	{
-		public RootView()
+		public SecondView()
 		{
 			InitializeComponent();
 		}

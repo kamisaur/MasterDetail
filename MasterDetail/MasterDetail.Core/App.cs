@@ -17,8 +17,8 @@ namespace MasterDetail.Core
 				.RegisterAsLazySingleton();
 
 
-			//RegisterAppStart<RootViewModel>();
-			RegisterAppStart<WindowViewModel>();
+			RegisterAppStart<RootViewModel>();
+			//RegisterAppStart<WindowViewModel>();
 		}
 
 	}
