@@ -7,7 +7,7 @@ using MvvmCross.ViewModels;
 
 namespace MasterDetail.Core.ViewModels
 {
-	class FirstViewModel : MvxNavigationViewModel
+	public class FirstViewModel : MvxNavigationViewModel
 	{
 
 		public string Title { get; set; } = "First View";

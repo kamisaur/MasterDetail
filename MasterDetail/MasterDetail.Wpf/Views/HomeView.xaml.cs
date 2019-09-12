@@ -1,7 +1,4 @@
-﻿using MasterDetail.Core.ViewModels;
-using MvvmCross.Platforms.Wpf.Presenters.Attributes;
-using MvvmCross.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,16 +15,14 @@ using System.Windows.Shapes;
 
 namespace MasterDetail.Wpf.Views
 {
-	/// <summary>
-	/// Interaction logic for RootView.xaml
-	/// </summary>
-	//[MvxContentPresentation(WindowIdentifier = nameof(WindowView), StackNavigation = false)]
-	public partial class RootView
-	{
-		public RootView()
-		{
-			InitializeComponent();
-		}
-
+    /// <summary>
+    /// Interaction logic for HomeView.xaml
+    /// </summary>
+    public partial class HomeView
+    {
+        public HomeView()
+        {
+            InitializeComponent();
+        }
     }
 }
